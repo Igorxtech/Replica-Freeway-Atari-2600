@@ -1,38 +1,27 @@
 //Código do carro
 
-//Carro 1
-let xCarro1 = 600;
-let yCarro1 = 40;
-let velocidadeCarro1 = 2;
-
-//Carro 2
-let xCarro2 = 600;
-let yCarro2 = 96;
-let velocidadeCarro2 = 2.5;
-
-//Carro 3
-let xCarro3 = 600;
-let yCarro3 = 150;
-let velocidadeCarro3 = 3.2;
+let yCarros = [40, 96, 150];
+let xCarros = [600, 600, 600];
+let velocidadeCarros = [2, 2.5, 3.2];
 
 function mostraCarro(){
-    image(imagemCarro, xCarro1, yCarro1, 50, 40);
-    image(imagemCarro2, xCarro2, yCarro2, 50, 40);
-    image(imagemCarro3, xCarro3, yCarro3, 50, 40);
+    image(imagemCarro, xCarros[0], yCarros[0], 50, 40);
+    image(imagemCarro2, xCarros[1], yCarros[1], 50, 40);
+    image(imagemCarro3, xCarros[2], yCarros[2], 50, 40);
 }
   
 function movimentaCarro(){
-    xCarro1 -= velocidadeCarro1;
-    xCarro2 -= velocidadeCarro2;
-    xCarro3 -= velocidadeCarro3;
+    xCarros[0] -= velocidadeCarros[0];
+    xCarros[1] -= velocidadeCarros[1];
+    xCarros[2] -= velocidadeCarros[2];
 }
 
 function voltaPosicaoInicialDoCarro(){
-    if(xCarro1 < -40){
-        xCarro1 = 600;
-    }else if(xCarro2 < -40){
-        xCarro2 = 600;
-    }else if(xCarro3 < -40){
-        xCarro3 = 600;
+    if(xCarros[0] < -40){
+        xCarros[0] = 600;
+    }else if(xCarros[1] < -40){
+        xCarros[1] = 600;
+    }else if(xCarros[2] < -40){
+        xCarros[2] = 600;
     }
 }
