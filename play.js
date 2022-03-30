@@ -1,6 +1,5 @@
 
-//Variáveis do carro
-let xCarro = 600;
+
 
 
 
@@ -14,26 +13,9 @@ function draw() {
   mostraAtor();
   mostraCarro();
   movimentaCarro();
+  voltaPosicaoInicialDoCarro();
   movimentaAtor();
 }
 
-function mostraAtor(){
-  image(imagemDoAtor, xAtor, yAtor, 30, 30);
-}
 
-function mostraCarro(){
-  image(imagemCarro, xCarro, 40, 50, 40);
-}
 
-function movimentaCarro(){
-  xCarro -= 2;
-}
-
-function movimentaAtor(){
-  if(keyIsDown(UP_ARROW)){
-    yAtor -= 3;
-  }
-  if(keyIsDown(DOWN_ARROW)){
-    yAtor += 3;
-  }
-}
