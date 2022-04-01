@@ -11,7 +11,7 @@ function mostraCarro(){
 }
   
 function movimentaCarro(){
-    for(i = 0; i < xCarros.length; i++){
+    for(let i = 0; i < xCarros.length; i++){
         xCarros[i] -= velocidadeCarros[i];
     }
 }

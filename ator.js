@@ -1,8 +1,9 @@
 //Código do ator
 
 let yAtor = 366;
-let xAtor = 100;
+let xAtor = 90;
 let colidiu = false;
+let meusPontos = 0;
 
 function mostraAtor(){
     image(imagemDoAtor, xAtor, yAtor, 30, 30);
@@ -18,14 +19,28 @@ function movimentaAtor(){
   }
 
 function verificaColisao(){
-  for(i = 0; i < imagemCarros.length; i++){
+  for(let i = 0; i < imagemCarros.length; i++){
     colidiu = collideRectCircle(xCarros[i], yCarros[i], 50, 40, xAtor, yAtor, 15);
     if(colidiu){
-      colisao();
+      voltaPosicaoInicialDoAtor();
     }
   }
 }
 
-function colisao(){
+function voltaPosicaoInicialDoAtor(){
   yAtor = 366;
+}
+
+function exibePontos(){
+  textAlign(CENTER);
+  textSize(25);
+  fill(255, 240, 60);
+  text(meusPontos, width / 5, 27);
+}
+
+function marcaPonto(){
+  if(yAtor < 15){
+    meusPontos += 1;
+    voltaPosicaoInicialDoAtor();
+  }
 }

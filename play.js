@@ -10,6 +10,8 @@ function draw() {
   voltaPosicaoInicialDoCarro();
   movimentaAtor();
   verificaColisao();
+  exibePontos();
+  marcaPonto();
 }
 
 
