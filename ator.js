@@ -21,7 +21,11 @@ function verificaColisao(){
   for(i = 0; i < imagemCarros.length; i++){
     colidiu = collideRectCircle(xCarros[i], yCarros[i], 50, 40, xAtor, yAtor, 15);
     if(colidiu){
-      console.log("bateu");
+      colisao();
     }
   }
+}
+
+function colisao(){
+  yAtor = 366;
 }
