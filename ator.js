@@ -2,6 +2,7 @@
 
 let yAtor = 366;
 let xAtor = 100;
+let colidiu = false;
 
 function mostraAtor(){
     image(imagemDoAtor, xAtor, yAtor, 30, 30);
@@ -15,3 +16,12 @@ function movimentaAtor(){
       yAtor += 3;
     }
   }
+
+function verificaColisao(){
+  for(i = 0; i < imagemCarros.length; i++){
+    colidiu = collideRectCircle(xCarros[i], yCarros[i], 50, 40, xAtor, yAtor, 15);
+    if(colidiu){
+      console.log("bateu");
+    }
+  }
+}
